@@ -26,6 +26,7 @@ defmodule Mongodb.Mixfile do
 
   def application do
     [applications: applications(Mix.env),
+      extra_applications: [:crypto, :ssl],
      mod: {Mongo.App, []},
      env: []]
   end
